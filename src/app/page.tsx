@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { UserButton } from '@clerk/nextjs';
 import { Button } from '@/components/ui/button';
 
 export default function Home() {
@@ -17,14 +18,9 @@ export default function Home() {
             rel='noopener noreferrer'
           >
             By{' '}
-            <Image
-              src='/vercel.svg'
-              alt='Vercel Logo'
-              className='dark:invert'
-              width={100}
-              height={24}
-              priority
-            />
+            <div className='h-screen'>
+              <UserButton afterSignOutUrl='/' />
+            </div>
           </a>
         </div>
       </div>
